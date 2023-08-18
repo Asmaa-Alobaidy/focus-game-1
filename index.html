@@ -99,14 +99,14 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1280px";
-        canvas.style.height = "720px";
+        canvas.style.width = "544px";
+        canvas.style.height = "306px";
       }
 
       loadingBar.style.display = "block";
 
 
-  fetch('http://api.brain10x.net/api/GetGameById?id=7')
+  fetch('https://api.brain10x.net/api/GetGameById?id=7')
   .then(response => response.json())
   .then(data => {
     if (data && data.status === true) {
