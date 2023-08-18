@@ -106,7 +106,7 @@
       loadingBar.style.display = "block";
 
 
-  fetch('https://api.brain10x.net/api/GetGameById?id=7')
+  fetch('http://api.brain10x.net/api/GetGameById?id=7')
   .then(response => response.json())
   .then(data => {
     if (data && data.status === true) {
