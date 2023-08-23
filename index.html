@@ -11,41 +11,6 @@
 
 
 
-    <div style="background-color: #274F96; height: 60px; color: #f2f2f2; display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; padding: 4px; padding-left: 8px; padding-right: 16px;">
-      <a href="https://brain10x.net">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-          <p style="font-size: 20px; font-weight: bold; margin: 0; padding: 0;">العودة للموقع</p>
-          <img src="https://brain10x.net/images/brand/white-png.png" alt="" style="width: 48px;" />
-      </div>
-      </a>
-  </div>
-
-
-<!-- Login -->
-  <div style="margin: 0 auto; background-color: white; width: 90%; max-width: 60%; margin: 0 auto; width: 45%; max-width: 50%; max-width: 40%;">
-    <form action="" onsubmit="handleSubmit();" style="margin-top: 1rem; margin-bottom: 0; display: flex; flex-direction: column; align-items: center; border-radius: 0.5rem; padding: 1rem; padding: 1.5rem; padding: 4.5rem; padding: 3rem; background-color: var(--yellow);">
-      <h1 style="font-size: 2rem; text-align: right; font-weight: bold; color: #0f4388; margin-bottom: 2.5rem;"> تسجيل دخول</h1>
-      <div>
-        <div style="position: relative; margin-top: 1rem; margin-bottom: 2rem;">
-          <p id="error-message" style="color: red; display: none;">حدث خطأ في تسجيل الدخول حاول مرة اخرى</p>
-          <label for="email" style="font-size: 0.875rem; font-weight: bold;">البريد الالكتروني:</label>
-          <input id="email" type="text" style="width: 100%; border-radius: 0.5rem; padding: 0.75rem; padding-right: 1.5rem; font-size: 0.875rem; color: #0f4388; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); background-color: #b9bfd4; margin-top: 0.25rem;" placeholder=" البريد الالكتروني" />
-        </div>
-      </div>
-      <div>
-        <div style="position: relative; margin-top: 1rem; margin-bottom: 1.5rem;">
-          <label for="password" style="font-size: 0.875rem; font-weight: bold;">كلمة المرور:</label>
-          <input id="password" type="password" style="width: 100%; border-radius: 0.5rem; padding: 0.75rem; padding-right: 1.5rem; font-size: 0.875rem; color: #0f4388; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); background-color: #b9bfd4; margin-top: 0.25rem;" placeholder="ادخل كلمة المرور" />
-        </div>
-      </div>
-      <button id="submit-button" type="submit" style="display: block; width: 100%; border-radius: 0.5rem; background-color: #0f4388; padding: 0.625rem 1.25rem; font-weight: bold; color: #f2f2f2; transition: background-color 200ms; margin-top: 1rem; cursor: pointer;"> تسجيل دخول </button>
-    </form>
-  </div>
-  <!-- Login -->
-
-
-
-
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1280 height=720></canvas>
       <div id="unity-loading-bar">
@@ -63,23 +28,15 @@
     </div>
     <script>
 
-/* Login Handle */
-var submitClicked = false;
-
-  function handleSubmit() {
-    submitClicked = true;
-    document.getElementById("error-message").style.display = "block"; // Display the error message for demonstration purposes
-    // Perform other form submission logic here
-  }
-
 
       var container = document.querySelector("#unity-container");
+     
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
-
+     
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -174,7 +131,7 @@ var submitClicked = false;
       document.body.appendChild(script);
 
     } else {
-      console.log("Attribute is not true, skipping WebGL application.");
+      alert("اللعبة مغلقة")
     }
   })
   .catch(error => console.error('Error fetching data:', error));
